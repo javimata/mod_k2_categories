@@ -8,7 +8,7 @@
     <authorUrl>www.javimata.com</authorUrl>
     <version>1.0.0</version>
     <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
-    <description>Lista de Categorias K2</description>
+    <description>K2 Categories list</description>
     <files>
         <filename module="mod_k2_categories">mod_k2_categories.php</filename>
         <filename>helper.php</filename>
@@ -18,53 +18,53 @@
     <config>
         <fields name="params">
             <fieldset name="basic" addfieldpath="/administrator/components/com_k2/elements/">
-                <field name="moduleclass_sfx" type="text" default="" label="Clase del modulo"/>
+                <field name="moduleclass_sfx" type="text" default="" label="Module class"/>
                 <field name="getTemplate" type="moduletemplate" modulename="mod_k2_categories" default="Default" label="Template"/>
 
-                <field name="" type="header" default="Selección de categorias" label="" description=""/>
-                <field name="catfilter" type="radio" default="0" label="Filtrar categorias" description="">
+                <field name="" type="header" default="Select categories" label="" description=""/>
+                <field name="catfilter" type="radio" default="0" label="Filter categories" description="">
                     <option value="0">K2_ALL</option>
                     <option value="1">K2_SELECT</option>
                 </field>
-                <field name="category_id" type="categoriesmultiple" default="" label="Selecciona categoria(s)"/>
-                <field name="itemsOrdering" type="list" default="" label="Ordenar por" description="">
+                <field name="category_id" type="categoriesmultiple" default="" label="Select categories"/>
+                <field name="itemsOrdering" type="list" default="" label="Sort By" description="">
                     <option value="">K2_DEFAULT</option>
                     <option value="date">ID</option>
-                    <option value="name">Nombre</option>
-                    <option value="order">Orden</option>
-                    <option value="rand">Aleatorio</option>
+                    <option value="name">Namee</option>
+                    <option value="order">Order</option>
+                    <option value="rand">Random</option>
                 </field>
 
-                <field name="listType" type="list" default="boostrap" label="Tipo de lista">
+                <field name="listType" type="list" default="boostrap" label="List type">
                     <option value="">K2_DEFAULT</option>
-                    <option value="ul">Listas (UL)</option>
+                    <option value="ul">Lists (UL)</option>
                     <option value="div">Div</option>
                     <option value="bootstrap">Bootstrap</option>
                 </field>
 
-                <field name="itemCount" type="text" size="4" default="4" label="Muestra"/>
-                <field name="colsCount" type="text" size="4" default="4" label="Columnas"/>
+                <field name="itemCount" type="text" size="4" default="4" label="Display"/>
+                <field name="colsCount" type="text" size="4" default="4" label="Rows"/>
 
 
-                <field name="" type="header" default="Configuración de muestra" label="" description=""/>
+                <field name="" type="header" default="Display configuration" label="" description=""/>
 
-                <field name="itemTitle" type="list" default="1" label="Muestra titulo" description="">
+                <field name="itemTitle" type="list" default="1" label="Display title" description="">
                     <option value="1">JYES</option>
                     <option value="0">JNO</option>
-                    <option value="2">Si, con enlace</option>
+                    <option value="2">Si, with link</option>
                 </field>
 
-                <field name="itemIntroText" type="radio" default="1" label="Muestra introtext" description="">
+                <field name="itemIntroText" type="radio" default="1" label="Show introtext" description="">
                     <option value="0">K2_HIDE</option>
                     <option value="1">K2_SHOW</option>
                 </field>
 
-                <field name="itemImgShow" type="radio" default="1" label="Muestra imagen" description="">
+                <field name="itemImgShow" type="radio" default="1" label="Show image" description="">
                     <option value="0">K2_HIDE</option>
                     <option value="1">K2_SHOW</option>
                 </field>
 
-                <field name="itemImgSize" type="list" default="Small" label="Tamaño imagen" description="">
+                <field name="itemImgSize" type="list" default="Small" label="Image size" description="">
                     <option value="XSmall">K2_XSMALL</option>
                     <option value="Small">K2_SMALL</option>
                     <option value="Medium">K2_MEDIUM</option>
