@@ -3,7 +3,7 @@
  * @version		2.6.x
  * @package		K2
  * @author		JoomlaWorks http://www.joomlaworks.net
- * @copyright	Copyright (c) 2006 - 2014 JoomlaWorks Ltd. All rights reserved.
+ * @copyright	        Copyright (c) 2006 - 2014 JoomlaWorks Ltd. All rights reserved.
  * @license		GNU/GPL license: http://www.gnu.org/copyleft/gpl.html
  */
 
@@ -168,14 +168,9 @@ class modK2CategoriesHelper
 
 				}
 
-				//Read more link
-				$item->link = urldecode(JRoute::_(K2HelperRoute::getItemRoute($item->id.':'.urlencode($item->alias))));
-
 				//Category link
 				// $item->categoryLink = urldecode(JRoute::_(K2HelperRoute::getCategoryRoute($item->id)));
-				$item->categoryLink = urldecode(JRoute::_(K2HelperRoute::getCategoryRoute($item->id.':'.urlencode($item->alias))));
-
-				$item->link = JURI::BASE(true) . '/' . $item->alias;
+				$item->link = urldecode(JRoute::_(K2HelperRoute::getCategoryRoute($item->id.':'.urlencode($item->alias))));
 
 				// Introtext
 				$item->text = '';
