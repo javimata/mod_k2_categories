@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jedupdate version="1">
+	<core_body>
+	test 
+	</core_body>
+	
+	<!-- valid links only or leave blank -->
+	<homepage_link>https://github.com/javimata/mod_k2_categories</homepage_link>
+	<download_link>https://github.com/javimata/mod_k2_categories/raw/master/mod_k2_categories.zip</download_link>
+	<documentation_link>https://github.com/javimata/mod_k2_categories</documentation_link>
+	<support_link>https://github.com/javimata/mod_k2_categories</support_link>
+	<license_link>https://github.com/javimata/mod_k2_categories</license_link>
+	
+	<version>3.1</version>
+
+	<compatibility>
+		<version>30</version>
+	</compatibility>
+</jedupdate>
