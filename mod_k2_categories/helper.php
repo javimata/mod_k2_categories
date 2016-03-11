@@ -1,9 +1,9 @@
 <?php
 /**
- * @version		2.6.x
- * @package		K2
- * @author		JoomlaWorks http://www.joomlaworks.net
- * @copyright	        Copyright (c) 2006 - 2014 JoomlaWorks Ltd. All rights reserved.
+ * @version		1.0.x
+ * @package		Categories for K2
+ * @author		@Javi_Mata http://www.javimata.com
+ * @copyright	Copyright (c) 2016 - All rights reserved.
  * @license		GNU/GPL license: http://www.gnu.org/copyleft/gpl.html
  */
 
