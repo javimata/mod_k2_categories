@@ -1,6 +1,6 @@
 <?php
 /**
- * @version		1.0.x
+ * @version		1.0.1
  * @package		Categories for K2
  * @author		@Javi_Mata http://www.javimata.com
  * @copyright	Copyright (c) 2016 - All rights reserved.
@@ -10,9 +10,6 @@
 // no direct access
 defined('_JEXEC') or die;
 ?>
-
-<div id="CategoriesK2<?php echo $module->id; ?>" class="CategoriesK2Block<?php if($params->get('moduleclass_sfx')) echo ' '.$params->get('moduleclass_sfx'); ?>">
-
 
 <?php
 
@@ -34,7 +31,7 @@ defined('_JEXEC') or die;
 			$ancho_cada  = 12 / $cols;
 			$inicia      = '<div class="row">';
 			$cierra      = '</div>';
-			$cada_inicia = '<div class="col-md-' . round ($ancho_cada) . ' itemList [CLASSLIST]">';
+			$cada_inicia = '<div class="col-sm-6 col-md-' . round ($ancho_cada) . ' itemList [CLASSLIST]">';
 			$cada_cierra = '</div>';
 			break;
 
