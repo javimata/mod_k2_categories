@@ -24,17 +24,9 @@ class modK2CategoriesHelper
 		$limit = $params->get('itemCount', 5);
 		$cid = $params->get('category_id', NULL);
 		$ordering = $params->get('itemsOrdering', '');
-		$componentParams = JComponentHelper::getParams('com_k2');
 		$limitstart = JRequest::getInt('limitstart');
 
-		$user = JFactory::getUser();
-		$aid = $user->get('aid');
 		$db = JFactory::getDBO();
-
-		$jnow = JFactory::getDate();
-		$now =  K2_JVERSION == '15'?$jnow->toMySQL():$jnow->toSql();
-		$nullDate = $db->getNullDate();
-
 
 		// Inicia Query
 		$query  = "SELECT c.*";
@@ -102,7 +94,7 @@ class modK2CategoriesHelper
 				$item->title = JFilterOutput::ampReplace($item->title);
 
 				//Images
-				if ($params->get('itemImage'))
+				if ($params->get('itemImgShow'))
 				{
 
 					$date = JFactory::getDate($item->modified);
@@ -111,62 +103,38 @@ class modK2CategoriesHelper
 					if (JFile::exists(JPATH_SITE.DS.'media'.DS.'k2'.DS.'items'.DS.'cache'.DS.md5("Image".$item->id).'_XS.jpg'))
 					{
 						$item->imageXSmall = JURI::base(true).'/media/k2/items/cache/'.md5("Image".$item->id).'_XS.jpg';
-						if ($componentParams->get('imageTimestamp'))
-						{
-							$item->imageXSmall .= $timestamp;
-						}
 					}
 
 					if (JFile::exists(JPATH_SITE.DS.'media'.DS.'k2'.DS.'items'.DS.'cache'.DS.md5("Image".$item->id).'_S.jpg'))
 					{
 						$item->imageSmall = JURI::base(true).'/media/k2/items/cache/'.md5("Image".$item->id).'_S.jpg';
-						if ($componentParams->get('imageTimestamp'))
-						{
-							$item->imageSmall .= $timestamp;
-						}
 					}
 
 					if (JFile::exists(JPATH_SITE.DS.'media'.DS.'k2'.DS.'items'.DS.'cache'.DS.md5("Image".$item->id).'_M.jpg'))
 					{
 						$item->imageMedium = JURI::base(true).'/media/k2/items/cache/'.md5("Image".$item->id).'_M.jpg';
-						if ($componentParams->get('imageTimestamp'))
-						{
-							$item->imageMedium .= $timestamp;
-						}
 					}
 
 					if (JFile::exists(JPATH_SITE.DS.'media'.DS.'k2'.DS.'items'.DS.'cache'.DS.md5("Image".$item->id).'_L.jpg'))
 					{
 						$item->imageLarge = JURI::base(true).'/media/k2/items/cache/'.md5("Image".$item->id).'_L.jpg';
-						if ($componentParams->get('imageTimestamp'))
-						{
-							$item->imageLarge .= $timestamp;
-						}
 					}
 
 					if (JFile::exists(JPATH_SITE.DS.'media'.DS.'k2'.DS.'items'.DS.'cache'.DS.md5("Image".$item->id).'_XL.jpg'))
 					{
 						$item->imageXLarge = JURI::base(true).'/media/k2/items/cache/'.md5("Image".$item->id).'_XL.jpg';
-						if ($componentParams->get('imageTimestamp'))
-						{
-							$item->imageXLarge .= $timestamp;
-						}
 					}
 
 					if (JFile::exists(JPATH_SITE.DS.'media'.DS.'k2'.DS.'items'.DS.'cache'.DS.md5("Image".$item->id).'_Generic.jpg'))
 					{
 						$item->imageGeneric = JURI::base(true).'/media/k2/items/cache/'.md5("Image".$item->id).'_Generic.jpg';
-						if ($componentParams->get('imageTimestamp'))
-						{
-							$item->imageGeneric .= $timestamp;
-						}
 					}
 
 					$image = 'image'.$params->get('itemImgSize', 'Small');
 					if (isset($item->$image))
 						$item->image = $item->$image;
 
-				}
+					}
 
 				//Category link
 				// $item->categoryLink = urldecode(JRoute::_(K2HelperRoute::getCategoryRoute($item->id)));
