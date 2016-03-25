@@ -92,5 +92,3 @@ defined('_JEXEC') or die;
     <?php endforeach; ?>
   
   <?php echo $cierra; ?>
-
-</div>
