@@ -30,7 +30,7 @@
                 <field name="itemsOrdering" type="list" default="" label="Sort By" description="">
                     <option value="">K2_DEFAULT</option>
                     <option value="date">ID</option>
-                    <option value="name">Namee</option>
+                    <option value="name">Name</option>
                     <option value="order">Order</option>
                     <option value="rand">Random</option>
                 </field>
@@ -51,7 +51,7 @@
                 <field name="itemTitle" type="list" default="1" label="Display title" description="">
                     <option value="1">JYES</option>
                     <option value="0">JNO</option>
-                    <option value="2">Si, with link</option>
+                    <option value="2">Yes, with link</option>
                 </field>
 
                 <field name="itemIntroText" type="radio" default="1" label="Show introtext" description="">
