@@ -1,7 +1,7 @@
 {
   "name": "Mod k2 categories",
   "tagline": "Select some categories to display it",
-  "body": "# mod_k2_categories\r\nSelect some categories to display it\r\n\r\n![Image of Plugin](https://raw.githubusercontent.com/javimata/mod_k2_categories/master/k2_categories.png)\r\n",
+  "body": "# mod_k2_categories\r\nSelect some categories to display it\r\n\r\nCan select one or more categories to display\r\n\r\nSort by many options\r\n\r\nList type:\r\n- Default & UL list out a UL list\r\n- DIV display each result in a DIV\r\n- Bootstrap add each result in a col div of bootstrap type col-md-[n]\r\n\r\nIf select Boostrap type and add a Row Number [n] is this number / 12, for example, if put in Rows 4 each result div must be a class col-md-3\r\n\r\n\r\n![Image of Plugin](https://raw.githubusercontent.com/javimata/mod_k2_categories/master/k2_categories.png)\r\n",
   "google": "UA-75132754-2",
   "note": "Don't delete this file! It's used internally to help with page regeneration."
 }
